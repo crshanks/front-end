@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -ev
+set -v
 
 if [[ -z "$GROUP" ]] ; then
     echo "Cannot find GROUP env var"
@@ -27,7 +27,7 @@ push() {
 tag_and_push_all() {
     if [[ -z "$1" ]] ; then
         echo "Please pass the tag"
-        exit 1
+        # exit 1
     else
         TAG=$1
     fi

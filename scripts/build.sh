@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -ev
+set -v
 
 SCRIPT_DIR=$(dirname "$0")
 
@@ -23,6 +23,6 @@ fi
 CODE_DIR=$(cd $SCRIPT_DIR/..; pwd)
 echo $CODE_DIR
 
-REPO=${GROUP}/$(basename front-end);
-
+REPO=${GROUP}/$(basename sock-shop-front-end-nr);
+echo $REPO
 $DOCKER_CMD build -t ${REPO}:${COMMIT} .
